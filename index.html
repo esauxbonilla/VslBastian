@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asesoría Legionaria 1:1 · Bastián Almaráz</title>
+  <meta name="description" content="El sistema de 12 semanas con el que profesionistas de +27 años bajan de 8 a 12 kilos con solo 3 entrenamientos a la semana, sin dejar de salir a comer.">
+  <meta name="theme-color" content="#111111">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- VSL (Wistia) -->
+  <script src="https://fast.wistia.com/embed/medias/pqjxn17x75.jsonp" async></script>
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
+  <!-- Meta Pixel [PENDIENTE: PIXEL_ID]. Descomentar y reemplazar el ID.
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="Legionarios 1:1">
+      <img src="assets/logo-legionarios.svg" alt="" class="brand-logo" onerror="this.remove()">
+      <span class="brand-word">LEGIONARIOS <b>1:1</b></span>
+    </a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO + VSL ============ -->
+    <section class="hero glow">
+      <div class="container narrow center">
+        <p class="callout">*Para profesionistas y dueños de negocio de +27 años con la agenda llena</p>
+
+        <h1 class="display">
+          El sistema de <span class="accent">12 semanas</span> con el que mis pacientes profesionistas de +27 años han bajado de <span class="accent">8 a 12 kilos</span>
+        </h1>
+
+        <p class="lead">…y por fin se ven como siempre han querido, sosteniendo una vida saludable. Con solo <strong>3 entrenamientos a la semana</strong> y un plan basado en evidencia, en gym o en casa.</p>
+
+        <ul class="without">
+          <li>Sin entrenar todos los días</li>
+          <li>Sin dejar de salir a comer</li>
+          <li>Sin depender de la fuerza de voluntad</li>
+        </ul>
+      </div>
+
+      <div class="container vsl-wrap">
+        <div class="vsl" id="vsl">
+          <div class="wistia_embed wistia_async_pqjxn17x75 videoFoam=false playerColor=e0362c" aria-label="Video: el sistema de 12 semanas de Bastián Almaráz">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="container narrow center">
+        <a href="#aplicar" class="btn btn-primary" data-track="cta_hero">Quiero mi consulta de diagnóstico</a>
+        <p class="micro">Llena el formulario y elige tu horario disponible.</p>
+
+        <div class="stats">
+          <div class="stat"><span class="stat-num">+1000</span><span class="stat-label">Casos de éxito documentados</span></div>
+          <div class="stat"><span class="stat-num">8–12 kg</span><span class="stat-label">En 12 semanas</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Entrenamientos por semana</span></div>
+        </div>
+
+        <ul class="cred-strip" aria-label="Formación">
+          <li>Lic. en Nutrición</li>
+          <li>Maestría en Culturismo Natural · UCAM, España</li>
+          <li>Certificado IFBB Pro League</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FORMULARIO + AGENDA ============ -->
+    <section class="section apply" id="aplicar">
+      <div class="container form-container">
+        <div class="form-card">
+          <ol class="form-steps" aria-label="Pasos">
+            <li class="is-active" data-step-indicator="1"><span>1</span> Aplica</li>
+            <li data-step-indicator="2"><span>2</span> Agenda tu consulta</li>
+          </ol>
+
+          <!-- Paso 1: aplicación -->
+          <div class="form-step" data-step="1">
+            <h2 class="form-title">Consulta de diagnóstico con Bastián</h2>
+            <p class="form-note">Una videollamada conmigo para conocer tu punto de partida: horarios, alimentación, entrenamiento, sueño, lesiones y qué te motiva.</p>
+            <p class="form-note muted">🔒 Tu información es confidencial. Solo se usa para preparar tu consulta.</p>
+
+            <form id="apply-form" novalidate>
+              <div class="field-grid">
+                <label class="field">
+                  <span>Nombre completo</span>
+                  <input type="text" name="nombre" autocomplete="name" required>
+                </label>
+                <label class="field">
+                  <span>WhatsApp (con lada)</span>
+                  <input type="tel" name="whatsapp" autocomplete="tel" placeholder="+52 55 1234 5678" required>
+                </label>
+                <label class="field">
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label class="field">
+                  <span>Edad</span>
+                  <input type="number" name="edad" min="18" max="90" inputmode="numeric" required>
+                </label>
+                <label class="field field-full">
+                  <span>País y ciudad</span>
+                  <input type="text" name="ubicacion" placeholder="México, CDMX" required>
+                </label>
+                <label class="field field-full">
+                  <span>¿Cómo es tu día a día en el trabajo?</span>
+                  <input type="text" name="ocupacion" placeholder="Ej. dirijo mi despacho, viajo 2 veces al mes" required>
+                </label>
+                <label class="field field-full">
+                  <span>¿Cuál es tu objetivo principal?</span>
+                  <select name="objetivo" required>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option>Bajar grasa</option>
+                    <option>Ganar músculo</option>
+                    <option>Recomposición (las dos)</option>
+                  </select>
+                </label>
+
+                <fieldset class="field field-full">
+                  <legend>¿Has trabajado antes con un coach o nutriólogo?</legend>
+                  <div class="choices">
+                    <label class="choice"><input type="radio" name="coach_previo" value="si" required><span>Sí</span></label>
+                    <label class="choice"><input type="radio" name="coach_previo" value="no"><span>No</span></label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="field field-full">
+                  <legend>¿Cuánto estás dispuesto a invertir en tu proceso? (USD)</legend>
+                  <div class="choices choices-4">
+                    <label class="choice"><input type="radio" name="inversion" value="0-199" required><span>Menos de $200</span></label>
+                    <label class="choice"><input type="radio" name="inversion" value="200-399"><span>$200 – $399</span></label>
+                    <label class="choice"><input type="radio" name="inversion" value="400-799"><span>$400 – $799</span></label>
+                    <label class="choice"><input type="radio" name="inversion" value="800+"><span>$800 o más</span></label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="field field-full">
+                  <legend>¿Puedes comprometerte 12 semanas con tu proceso?</legend>
+                  <div class="choices">
+                    <label class="choice"><input type="radio" name="compromiso" value="si" required><span>Sí</span></label>
+                    <label class="choice"><input type="radio" name="compromiso" value="no"><span>No</span></label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <!-- UTMs (se llenan solos desde la URL) -->
+              <input type="hidden" name="utm_source">
+              <input type="hidden" name="utm_medium">
+              <input type="hidden" name="utm_campaign">
+              <input type="hidden" name="utm_content">
+              <input type="hidden" name="utm_term">
+
+              <p class="form-error" role="alert" hidden>Revisa los campos marcados.</p>
+              <button type="submit" class="btn btn-primary btn-block">Continuar a la agenda</button>
+            </form>
+          </div>
+
+          <!-- Paso 2: agenda -->
+          <div class="form-step" data-step="2" hidden>
+            <h2 class="form-title">Elige el día y la hora de tu consulta</h2>
+            <p class="form-note">Elige el horario que mejor te acomode. Te confirmamos por WhatsApp.</p>
+            <div class="calendar" id="calendar">
+              <div class="calendar-placeholder">
+                <span class="pending">[PENDIENTE: embed de agenda — Calendly o iClosed]</span>
+                <span class="muted small" id="route-label"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRUEBA + CASOS ============ -->
+    <section class="section glow-soft" id="casos">
+      <div class="container">
+        <p class="eyebrow center">Resultados reales</p>
+        <h2 class="display-2 center">Más de <span class="accent">1000 casos de éxito</span> documentados</h2>
+        <p class="section-sub center">Pacientes en Latinoamérica, Europa y Asia. Cada uno con un contexto distinto y un protocolo hecho para su vida.</p>
+
+        <div class="cases">
+          <article class="case">
+            <header class="case-head">
+              <h3 class="case-name">Héctor</h3>
+              <p class="case-role">Creador de contenido · 30 años</p>
+              <p class="case-result">Marcó su abdomen por primera vez · 12 semanas</p>
+            </header>
+            <div class="case-photos">
+              <figure class="photo"><img src="assets/casos/hector-antes.jpg" alt="Héctor antes" loading="lazy" style="object-position: center 20%"><span class="tag">Antes</span></figure>
+              <figure class="photo"><img src="assets/casos/hector-despues.jpg" alt="Héctor después" loading="lazy" style="object-position: center 30%"><span class="tag">Después</span></figure>
+            </div>
+            <p class="case-caption">Nunca en su vida había marcado el abdomen. En sus primeras 12 semanas mejoró sus proporciones: hombros, espalda y abdomen.</p>
+          </article>
+
+          
+
+          <article class="case">
+            <header class="case-head">
+              <h3 class="case-name">Osiris</h3>
+              <p class="case-role">Trabajo en granja (EE. UU.) · 51 años</p>
+              <p class="case-result">Recomposición · 12 semanas</p>
+            </header>
+            <div class="case-photos">
+              <figure class="photo"><img src="assets/casos/osiris-antes.jpg" alt="Osiris antes" loading="lazy" style="object-position: 60% center"><span class="tag">Antes</span></figure>
+              <figure class="photo"><img src="assets/casos/osiris-despues.jpg" alt="Osiris después" loading="lazy" style="object-position: 45% center"><span class="tag">Después</span></figure>
+            </div>
+            <p class="case-caption">Trabajo de una demanda física altísima. Entrena de noche, cuando ya llega fatigado: la clave fue gestionar la fatiga.</p>
+          </article>
+
+          <article class="case">
+            <header class="case-head">
+              <h3 class="case-name">Rubén</h3>
+              <p class="case-role">Marketing · Argentina</p>
+              <p class="case-result">Entrenando en casa · 12 semanas</p>
+            </header>
+            <div class="case-photos">
+              <figure class="photo"><img src="assets/casos/ruben-antes.jpg" alt="Rubén antes" loading="lazy" style="object-position: center top"><span class="tag">Antes</span></figure>
+              <figure class="photo"><img src="assets/casos/ruben-despues.jpg" alt="Rubén después" loading="lazy" style="object-position: center 10%"><span class="tag">Después</span></figure>
+            </div>
+            <p class="case-caption">Sin gimnasio, solo con equipo de calistenia. Mejor definición, más fuerza y mejores proporciones.</p>
+          </article>
+
+          <article class="case">
+            <header class="case-head">
+              <h3 class="case-name">Brian</h3>
+              <p class="case-role">Ingeniero · 35 años</p>
+              <p class="case-result">−6 kg · 8 semanas</p>
+            </header>
+            <div class="case-photos">
+              <figure class="photo"><img src="assets/casos/brian-antes.jpg" alt="Brian antes" loading="lazy" style="object-position: center 30%"><span class="tag">Antes</span></figure>
+              <figure class="photo"><img src="assets/casos/brian-despues.jpg" alt="Brian después" loading="lazy" style="object-position: center 30%"><span class="tag">Después</span></figure>
+            </div>
+            <p class="case-caption">Llegó con buena base muscular pero estancado. Quiere competir en culturismo: primero mejoramos su entorno metabólico y ahora va por ganar músculo.</p>
+          </article>
+
+          <article class="case">
+            <header class="case-head">
+              <h3 class="case-name">Mario</h3>
+              <p class="case-role">Licenciado · 31 años</p>
+              <p class="case-result">−20 kg · 6 meses</p>
+            </header>
+            <div class="case-photos">
+              <figure class="photo"><img src="assets/casos/mario-antes.jpg" alt="Mario antes" loading="lazy" style="object-position: center top"><span class="tag">Antes</span></figure>
+              <figure class="photo"><img src="assets/casos/mario-despues.jpg" alt="Mario después" loading="lazy" style="object-position: center 25%"><span class="tag">Después</span></figure>
+            </div>
+            <p class="case-caption">Batalló mucho tiempo con la grasa elevada y la salud deteriorada. Hoy va cómodo al gym y usa ropa que llevaba años sin ponerse.</p>
+          </article>
+          <article class="case">
+            <header class="case-head">
+              <h3 class="case-name">Aziel</h3>
+              <p class="case-role">Papá · 31 años</p>
+              <p class="case-result">De 105 kg a 84 kg · 6 meses</p>
+            </header>
+            <div class="case-photos">
+              <figure class="photo"><img src="assets/casos/aziel-antes.jpg" alt="Aziel antes" loading="lazy" style="object-position: center 25%"><span class="tag">Antes</span></figure>
+              <figure class="photo"><img src="assets/casos/aziel-despues.jpg" alt="Aziel después" loading="lazy" style="object-position: center 25%"><span class="tag">Después</span></figure>
+            </div>
+            <p class="case-caption">Papá con el tiempo muy limitado. El cambio no solo se vio por fuera: su química sanguínea también lo reflejó.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOLOR ============ -->
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Te suena</p>
+        <h2 class="display-2">Resuelves todo en tu trabajo. <span class="accent">Menos esto.</span></h2>
+        <div class="prose">
+          <p>Diriges juntas, cierras tratos y sacas adelante proyectos que nadie más pudo. Pero llevas años sin poder con los mismos kilos de más.</p>
+        </div>
+        <ul class="pains">
+          <li>La camisa que aprieta en el segundo botón.</li>
+          <li>La foto del viaje que mejor no subiste.</li>
+          <li>Las 4 de la tarde y ya no das una.</li>
+          <li>Llegar a casa sin pila para nada que no sea el sillón.</li>
+          <li>El "este lunes sí empiezo"… otra vez.</li>
+        </ul>
+        <div class="prose">
+          <p class="strong">Y lo que más pesa no son los kilos. Es que no cuadra: alguien que tiene el control de su vida no debería sentirse así con su propio cuerpo.</p>
+          <p>Casi todos mis pacientes llegaron justo así. Y casi todos ya lo habían intentado con alguno de estos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ENEMIGO: 3 TIPOS DE COACHES ============ -->
+    <section class="section">
+      <div class="container">
+        <h2 class="display-2 center">Hay 3 tipos de coaches vendiéndote soluciones que <span class="accent">no funcionan</span></h2>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z M14 3v5h5 M10 13h6 M10 17h6"/></svg>
+            </span>
+            <h3 class="card-title">Los de dietas y rutinas de internet</h3>
+            <p>Te venden una plantilla que ya usaron Pepito Pérez y otras dos mil personas. No sabe a qué hora sales del trabajo, cuánto duermes, si tienes lesiones ni qué ejercicio no le va a tu cuerpo. Y cuando te estancas, nadie la ajusta.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            </span>
+            <h3 class="card-title">Los vendedores de motivación</h3>
+            <p>Retos de 30 días, dietas extremas y el "solo te faltan ganas, hermano". Funciona mientras dura la emoción. El lunes que ya no estás motivado, todo se cae… y encima te hacen sentir que el problema eres tú.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z M9 9h6 M9 13h6 M4 21 20 5"/></svg>
+            </span>
+            <h3 class="card-title">Los de "ahí te va tu PDF"</h3>
+            <p>Te cobran, te mandan un documento (o un WhatsApp que parece ticket del súper) y desaparecen. Cuando el plan choca con tu vida real (una semana pesada, una cena, un mal día), no hay nadie para ajustarlo. Abandonas y vuelves a empezar desde cero.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NO ES DISCIPLINA ============ -->
+    <section class="section section-tight">
+      <div class="container narrow center">
+        <p class="eyebrow">Por qué no te ha funcionado</p>
+        <h2 class="display-2">Tu plan estaba hecho <span class="accent">para otra vida</span></h2>
+        <p class="lead">Rutinas de 6 días. Dietas que no sobreviven a una comida de negocios. Retos que dan por hecho que tienes la tarde libre. Casi todo lo que probaste se diseñó para alguien de 22 años sin juntas, sin vuelos y sin familia que atender.</p>
+        <p class="lead"><strong>No fallaste tú: el plan nunca cupo en tu agenda.</strong> Disciplina te sobra. Lo que te faltó fue un protocolo que se ajustara a tu semana.</p>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA (4 PASOS) ============ -->
+    <section class="section glow-soft" id="como-funciona">
+      <div class="container">
+        <p class="eyebrow center">La salida más simple</p>
+        <h2 class="display-2 center">Cómo funciona la asesoría <span class="accent">por dentro</span></h2>
+        <p class="section-sub center">Diagnóstico, protocolo, acompañamiento y medición. Los 4 pasos para una metodología que sí es personalizada para ti.</p>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <div class="step-body">
+              <h3 class="step-title">Consulta de diagnóstico</h3>
+              <p>Lo primero es una videollamada conmigo para conocer tu punto de partida: tus horarios, cuántas comidas haces y cuáles te gustan, el equipo que tienes, qué quieres priorizar de tu físico, cuánto y cómo duermes, lesiones y patologías.</p>
+              <p>Y algo que muchos coaches omiten: <strong>qué te motiva</strong>. No es lo mismo buscarlo por salud, por estética o por una lesión. Con eso y un cuestionario más específico definimos si arrancas en definición, volumen o recomposición.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <div class="step-body">
+              <h3 class="step-title">Tu protocolo + semana de calibración</h3>
+              <p>Te entrego tu plan de entrenamiento, tu protocolo de nutrición, tu descanso y tu diario de entrenamiento. Tu alimentación no vive en un PDF: la tienes en una app en tu celular y, si hay que ajustar algo, lo ves en tiempo real.</p>
+              <p>Si un día llegas destrozado del trabajo, recorres el entrenamiento y no pasa nada. Lo que importa es cumplir el total de la semana.</p>
+              <p class="highlight">Tus 12 semanas <strong>no empiezan a correr</strong> hasta que probamos el plan una semana completa, ajustamos lo que haga falta y me dices: "Bastián, estamos listos".</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <div class="step-body">
+              <h3 class="step-title">Seguimiento y acompañamiento</h3>
+              <p>Aquí es donde una asesoría brilla o se cae. Durante las 12 semanas tienes chat directo conmigo para tus dudas diarias y videollamada cada 2 semanas. <strong>No hay un entrenador ni un nutriólogo de mi equipo en medio: todo tu proceso lo llevo yo.</strong></p>
+              <p>Hacemos ajustes cada vez que tu cuerpo o tu semana lo pidan. Un plan que no cambia de la semana 1 a la 12 no es personalizado. Si te estancas, se ajusta.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <div class="step-body">
+              <h3 class="step-title">Medición y proyección</h3>
+              <p>Lo que no se cuantifica no se mejora. Registro tu peso promedio semanal, tus fotos y tus medidas, y te grafico cómo mejora tu composición corporal. Avance real, no especulaciones.</p>
+              <p>Al cerrar las 12 semanas repasamos todo lo logrado y te digo con honestidad cuál es tu siguiente etapa: otra fase de definición o pasar a ganar músculo.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DESPUÉS ============ -->
+    <section class="section">
+      <div class="container narrow center">
+        <p class="eyebrow">En 12 semanas</p>
+        <h2 class="display-2">Que tu cuerpo por fin <span class="accent">cuadre con tu vida</span></h2>
+        <ul class="pains pains-win">
+          <li>Abrochas el saco sin aguantar la respiración.</li>
+          <li>Te paras al frente en la foto, no atrás.</li>
+          <li>Llegas a la noche con energía para lo que importa.</li>
+          <li>Pides lo que quieres en la cena con socios y sigues avanzando.</li>
+          <li>Ya no "empiezas el lunes": sabes sostenerlo.</li>
+        </ul>
+        <p class="lead">En promedio, mis pacientes bajan de <strong>8 a 12 kilos en 12 semanas</strong> y ganan músculo mientras pierden grasa. Sin pausar su agenda: con viajes, comidas fuera y entrenos de noche incluidos.</p>
+      </div>
+    </section>
+
+    <!-- ============ DELEGAR ============ -->
+    <section class="section section-tight">
+      <div class="container narrow center">
+        <h2 class="display-2">En tu trabajo no improvisas. <span class="accent">¿Por qué con tu cuerpo sí?</span></h2>
+        <p class="lead">Para lo importante buscas a un especialista: un contador para tus impuestos, un abogado para un contrato. Y le pides resultados con números. Con tu cuerpo funciona igual: yo diseño, mido y ajusto. Tú ejecutas 3 entrenamientos a la semana.</p>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ INCLUYE (BENTO) ============ -->
+    <section class="section">
+      <div class="container">
+        <h2 class="display-2 center">Lo que tienes durante <span class="accent">12 semanas</span></h2>
+        <div class="bento">
+          <article class="card bento-wide glow-card">
+            <h3 class="card-title accent">Acceso directo a Bastián</h3>
+            <p>Chat directo conmigo para tus dudas del día a día y videollamada cada 2 semanas. Sin intermediarios: cada respuesta tiene un porqué y te la explico en lenguaje sencillo.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title accent">Protocolo a tu medida</h3>
+            <p>Entrenamiento, nutrición y descanso armados desde tu diagnóstico. En gym o en casa.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title accent">Nutrición en app</h3>
+            <p>Tu plan de alimentación en tu celular, no en un PDF. Los ajustes te llegan en tiempo real.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title accent">Semana de calibración</h3>
+            <p>Probamos el plan una semana completa antes de que empiecen a correr tus 12 semanas.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title accent">Medición con datos</h3>
+            <p>Peso promedio semanal, fotos, medidas y gráficas de tu composición corporal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FILTRO: NO ES / SÍ ES PARA TI ============ -->
+    <section class="section glow-soft">
+      <div class="container">
+        <p class="eyebrow center">Trabajo con pocos pacientes a la vez</p>
+        <h2 class="display-2 center">Busco a las <span class="accent">personas correctas</span></h2>
+        <p class="section-sub center">Llegué a llevar más de 50 pacientes al mismo tiempo y la atención no fue la que quería dar. No va a volver a pasar: hoy trabajo con pocos para que cada uno tenga atención real.</p>
+
+        <div class="paths">
+          <article class="path path-no">
+            <h3 class="path-title">Esto no es para ti si…</h3>
+            <ul class="list list-x">
+              <li>Buscas un cambio físico en 30 días o una solución rápida.</li>
+              <li>Quieres una rutina gratis o no estás dispuesto a invertir en un acompañamiento profesional.</li>
+              <li>Buscas a alguien que te motive y te aplauda todos los días.</li>
+              <li>No puedes comprometerte durante 12 semanas.</li>
+            </ul>
+          </article>
+
+          <span class="vs" aria-hidden="true">VS</span>
+
+          <article class="path path-yes">
+            <h3 class="path-title">Pero sí es para ti si…</h3>
+            <ul class="list list-check">
+              <li>Tienes un trabajo establecido y los horarios apretados.</li>
+              <li>Tu carrera o tu negocio van bien y quieres que tu físico avance al mismo ritmo.</li>
+              <li>Ya entrenas o ya lo intentaste, y te estancaste.</li>
+              <li>Estás listo para una estructura hecha para tu vida real, con acompañamiento personal.</li>
+            </ul>
+            <a href="#aplicar" class="btn btn-light" data-track="cta_filtro">Quiero aplicar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUIÉN SOY ============ -->
+    <section class="section" id="quien-soy">
+      <div class="container about">
+        <figure class="about-photo">
+          <img src="assets/bastian.jpg" alt="Bastián Almaráz" loading="lazy">
+        </figure>
+        <div class="about-body">
+          <p class="eyebrow">¿Quién soy?</p>
+          <h2 class="display-2">Bastián <span class="accent">Almaráz</span></h2>
+          <p class="about-quote">"Lo que casi me destruye terminó construyéndome."</p>
+
+          <ul class="creds">
+            <li><strong>Maestría en Culturismo Natural</strong>, la primera en el mundo · Universidad Católica San Antonio de Murcia (UCAM), España</li>
+            <li><strong>Licenciatura en Nutrición</strong> · Universidad Montrer, Morelia</li>
+            <li><strong>7 años</strong> como entrenador con certificaciones internacionales: IFBB Pro League, NASM, NCSF, ISSA y AFAA</li>
+            <li><strong>+1000</strong> casos de éxito en Latinoamérica, Europa y Asia</li>
+            <li><strong>+500 mil</strong> seguidores en Instagram y ~10 años creando contenido educativo</li>
+          </ul>
+
+          <div class="prose">
+            <p>El mejor coach no es el que te habla con tecnicismos para impresionarte. Es el que domina la ciencia y te la explica en sencillo, para que entiendas el porqué de cada paso. <strong>Dirección, no motivación.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section glow-soft" id="faq">
+      <div class="container narrow">
+        <p class="eyebrow center">Preguntas frecuentes</p>
+        <h2 class="display-2 center">Resuelve tus <span class="accent">dudas</span></h2>
+
+        <div class="faq">
+          <details>
+            <summary>Ya lo intenté antes y no me funcionó, ¿por qué ahora sí?</summary>
+            <p>Casi siempre que alguien me dice esto, siguió una rutina de internet o una dieta genérica sin seguimiento, y la dejó a las pocas semanas. No te faltó disciplina: te faltó un plan que se ajustara cuando tus circunstancias se complicaron, y alguien que te diera las herramientas para reaccionar.</p>
+          </details>
+          <details>
+            <summary>¿Voy a hablar directamente con Bastián?</summary>
+            <p>Sí. La consulta de diagnóstico es conmigo, y durante las 12 semanas tienes chat directo conmigo y videollamada cada 2 semanas. No hay un entrenador ni un nutriólogo de mi equipo en medio: todo tu proceso lo llevo yo.</p>
+          </details>
+          <details>
+            <summary>No tengo tiempo, ¿cuánto le tengo que dedicar?</summary>
+            <p>3 entrenamientos a la semana. No necesitas entrenar 5 o 6 días como un culturista, y si tu agenda se satura puedes mover los entrenamientos. Te lo digo con honestidad: si no puedes sacar 3 horas a la semana, el problema no es el plan, es que todavía no es tu prioridad.</p>
+          </details>
+          <details>
+            <summary>¿Funciona si entreno en casa o tengo poco equipo?</summary>
+            <p>Sí. Diseño tu protocolo con el equipo que tienes. Sí hay un equipo mínimo para lograr buenos resultados (no se pueden hacer maravillas solo con una barra de dominadas y el piso), pero se consigue fácil para casa y te digo exactamente cuál.</p>
+          </details>
+          <details>
+            <summary>¿En cuánto tiempo veo resultados?</summary>
+            <p>La primera semana es de calibración. En las primeras semanas vas a notar el cambio en tu peso, en tu energía y en el espejo. A las 12 semanas el cambio ya es significativo. Quien te prometa tu físico en 30 días te está mintiendo.</p>
+          </details>
+          <details>
+            <summary>¿Por qué 12 semanas?</summary>
+            <p>Es el periodo mínimo que la evidencia científica marca para una ganancia de músculo significativa y para que el cuerpo se adapte a la dieta. Tus 12 semanas empiezan a correr hasta que pasa la semana de calibración y me das luz verde.</p>
+          </details>
+          <details>
+            <summary>Viajo mucho y como fuera seguido, ¿funciona para mí?</summary>
+            <p>Sí. Para eso existe el seguimiento: cuando tu semana cambia (viajes, cenas con clientes o socios, comidas que no puedes pesar, una semana pesada), el plan se ajusta.</p>
+          </details>
+          <details>
+            <summary>¿En qué se diferencia de una app?</summary>
+            <p>Una app es genérica. No sabe que duermes 4 o 5 horas, que trabajas de noche, que tuviste una semana pesada, que tu estrés está por los cielos o que te duele un ejercicio. Un entrenador y nutriólogo sí, y mi trabajo es ajustar tu plan según cómo respondes cada semana.</p>
+          </details>
+          <details>
+            <summary>¿Qué incluye la asesoría?</summary>
+            <p>Consulta de diagnóstico, protocolo de entrenamiento, nutrición en app y descanso, diario de entrenamiento, semana de calibración, chat directo conmigo, videollamada cada 2 semanas, ajustes cuando los necesites y medición constante (peso, fotos, medidas y gráficas).</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta?</summary>
+            <p>La inversión depende de tu caso y la platicamos en la consulta de diagnóstico, una vez que revisamos tu punto de partida.</p>
+          </details>>
+          <details>
+            <summary>¿Qué pasa si no me funciona?</summary>
+            <p>Por eso existe la semana de calibración: tus 12 semanas no arrancan hasta que el plan funciona con tu vida real. </p>
+          </details>
+          <details>
+            <summary>¿Puedo tomarla desde cualquier país?</summary>
+            <p>Sí. La asesoría es 100% en línea y tengo pacientes en Latinoamérica, Europa y Asia; muchos son mexicanos que viven fuera del país.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="section final glow">
+      <div class="container narrow center">
+        <p class="eyebrow">Tu decisión</p>
+        <h2 class="display">Dentro de 12 semanas vas a estar <span class="accent">en uno de dos lugares</span></h2>
+        <div class="paths-final">
+          <article class="path path-no">
+            <h3 class="path-title">Igual que hoy</h3>
+            <p>Con la misma camisa apretando, otra foto que no subes y otro lunes para "ahora sí empezar".</p>
+          </article>
+          <article class="path path-yes">
+            <h3 class="path-title">Con un plan que sí cupo</h3>
+            <p>Midiendo tu avance cada semana, con kilos menos en la báscula y un protocolo que ya sabes sostener. Y con gente preguntándote qué estás haciendo diferente.</p>
+          </article>
+        </div>
+        <a href="#aplicar" class="btn btn-primary" data-track="cta_final">Agenda tu consulta de diagnóstico</a>
+        <p class="micro">Si hoy no es tu momento, no agendes. Si lo es, aplica y elige tu horario.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container center">
+      <p class="disclaimer">Los resultados mostrados corresponden a pacientes reales con circunstancias, compromiso y punto de partida particulares. No son una garantía; tus resultados pueden variar.</p>
+      <p class="muted small">© 2026 Bastián Almaráz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Sistema / editor
+.DS_Store
+*.code-workspace
+
+# Documentos internos (no se publican: el repo es público)
+CONTEXTO_LANDING_BASTIAN.md
+DECISIONES.md
+inspiracion/
+copywriting-respuesta-directa/
+
+# Fotos originales (la landing usa las versiones optimizadas en assets/)
+images/
