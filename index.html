@@ -82,13 +82,13 @@
       </div>
     </section>
 
-    <!-- ============ FORMULARIO + AGENDA ============ -->
+    <!-- ============ FORMULARIO + RUTEO ============ -->
     <section class="section apply" id="aplicar">
       <div class="container form-container">
         <div class="form-card">
           <ol class="form-steps" aria-label="Pasos">
             <li class="is-active" data-step-indicator="1"><span>1</span> Aplica</li>
-            <li data-step-indicator="2"><span>2</span> Agenda tu consulta</li>
+            <li data-step-indicator="2"><span>2</span> Tu siguiente paso</li>
           </ol>
 
           <!-- Paso 1: aplicación -->
@@ -113,15 +113,21 @@
                 </label>
                 <label class="field">
                   <span>Edad</span>
-                  <input type="number" name="edad" min="18" max="90" inputmode="numeric" required>
+                  <input type="number" name="edad" min="14" max="90" inputmode="numeric" required>
                 </label>
                 <label class="field field-full">
                   <span>País y ciudad</span>
                   <input type="text" name="ubicacion" placeholder="México, CDMX" required>
                 </label>
                 <label class="field field-full">
-                  <span>¿Cómo es tu día a día en el trabajo?</span>
-                  <input type="text" name="ocupacion" placeholder="Ej. dirijo mi despacho, viajo 2 veces al mes" required>
+                  <span>¿A qué te dedicas?</span>
+                  <select name="ocupacion" required>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="profesionista">Profesionista independiente</option>
+                    <option value="negocio">Tengo mi propio negocio</option>
+                  </select>
                 </label>
                 <label class="field field-full">
                   <span>¿Cuál es tu objetivo principal?</span>
@@ -134,7 +140,7 @@
                 </label>
 
                 <fieldset class="field field-full">
-                  <legend>¿Has trabajado antes con un coach o nutriólogo?</legend>
+                  <legend>¿Le has pagado antes a un coach o nutriólogo?</legend>
                   <div class="choices">
                     <label class="choice"><input type="radio" name="coach_previo" value="si" required><span>Sí</span></label>
                     <label class="choice"><input type="radio" name="coach_previo" value="no"><span>No</span></label>
@@ -142,12 +148,21 @@
                 </fieldset>
 
                 <fieldset class="field field-full">
-                  <legend>¿Cuánto estás dispuesto a invertir en tu proceso? (USD)</legend>
-                  <div class="choices choices-4">
-                    <label class="choice"><input type="radio" name="inversion" value="0-199" required><span>Menos de $200</span></label>
-                    <label class="choice"><input type="radio" name="inversion" value="200-399"><span>$200 – $399</span></label>
-                    <label class="choice"><input type="radio" name="inversion" value="400-799"><span>$400 – $799</span></label>
-                    <label class="choice"><input type="radio" name="inversion" value="800+"><span>$800 o más</span></label>
+                  <legend>Si encontramos el plan correcto para ti, ¿cuánto puedes invertir en tu cambio físico?</legend>
+                  <div class="choices choices-3">
+                    <label class="choice"><input type="radio" name="inversion" value="0-199" required><span>Menos de $200 USD<small>≈ menos de $3,600 MXN</small></span></label>
+                    <label class="choice"><input type="radio" name="inversion" value="200-450"><span>$200 – $450 USD<small>≈ $3,600 – $8,100 MXN</small></span></label>
+                    <label class="choice"><input type="radio" name="inversion" value="450+"><span>Más de $450 USD<small>≈ más de $8,100 MXN</small></span></label>
+                  </div>
+                </fieldset>
+
+                <!-- Solo aparece si eligió menos de $200 -->
+                <fieldset class="field field-full" id="field-hoy" hidden>
+                  <legend>¿Y cuánto podrías invertir hoy mismo?</legend>
+                  <div class="choices choices-3">
+                    <label class="choice"><input type="radio" name="inversion_hoy" value="0-49"><span>Menos de $50 USD<small>≈ menos de $900 MXN</small></span></label>
+                    <label class="choice"><input type="radio" name="inversion_hoy" value="50-100"><span>$50 – $100 USD<small>≈ $900 – $1,800 MXN</small></span></label>
+                    <label class="choice"><input type="radio" name="inversion_hoy" value="100-200"><span>$100 – $200 USD<small>≈ $1,800 – $3,600 MXN</small></span></label>
                   </div>
                 </fieldset>
 
@@ -168,23 +183,75 @@
               <input type="hidden" name="utm_term">
 
               <p class="form-error" role="alert" hidden>Revisa los campos marcados.</p>
-              <button type="submit" class="btn btn-primary btn-block">Continuar a la agenda</button>
+              <button type="submit" class="btn btn-primary btn-block">Continuar</button>
             </form>
           </div>
 
-          <!-- Paso 2: agenda -->
-          <div class="form-step" data-step="2" hidden>
-            <h2 class="form-title">Elige el día y la hora de tu consulta</h2>
-            <p class="form-note">Elige el horario que mejor te acomode. Te confirmamos por WhatsApp.</p>
-            <div class="calendar" id="calendar">
-              <div class="calendar-placeholder">
-                <span class="pending">[PENDIENTE: embed de agenda — Calendly o iClosed]</span>
-                <span class="muted small" id="route-label"></span>
-              </div>
-            </div>
-          </div>
+          <!-- Paso 2: resultado según la ruta (se llena desde main.js con las plantillas de abajo) -->
+          <div class="form-step" data-step="2" id="result" hidden></div>
         </div>
       </div>
+
+      <!-- Ruta: llamada (Bastián o closer) -->
+      <template id="tpl-llamada">
+        <p class="eyebrow">Calificas para una consulta</p>
+        <h2 class="form-title">Listo, <span data-nombre></span>. Elige el día y la hora de tu consulta</h2>
+        <p class="form-note">Es una videollamada de diagnóstico. Escoge el horario que mejor te acomode y asegúrate de poder conectarte a tiempo.</p>
+        <div class="calendar" id="calendar"></div>
+        <p class="micro center">¿No ves el calendario? <a data-agenda-link href="#" target="_blank" rel="noopener">Ábrelo aquí</a>.</p>
+      </template>
+
+      <!-- Ruta: Gold Members por WhatsApp con Dani ($100–200 hoy) -->
+      <template id="tpl-gold-whatsapp">
+        <p class="eyebrow">Tu ruta recomendada</p>
+        <h2 class="form-title">Gracias por tu honestidad, <span data-nombre></span></h2>
+        <p class="form-note">Mi asesoría 1:1 requiere una inversión que hoy no está en tu rango. Pero no te voy a dejar sin dirección.</p>
+        <div class="offer">
+          <h3 class="offer-name">Gold Members</h3>
+          <p class="offer-desc">Seguimiento mensual con mi equipo Legionario para que avances con estructura desde este mes.</p>
+          <ul class="list list-check offer-list">
+            <li><span class="pending">[PENDIENTE: beneficio 1 de Gold]</span></li>
+            <li><span class="pending">[PENDIENTE: beneficio 2 de Gold]</span></li>
+            <li><span class="pending">[PENDIENTE: beneficio 3 de Gold]</span></li>
+          </ul>
+          <p class="offer-note">Escríbele a Dani, de mi equipo. Ya le llegan tus respuestas y te ayuda a arrancar hoy.</p>
+          <a class="btn btn-primary btn-block" data-offer="gold_whatsapp" href="#" target="_blank" rel="noopener">Hablar con Dani por WhatsApp</a>
+        </div>
+        <p class="micro center">Y cuando estés listo para el 1:1, aquí voy a estar.</p>
+      </template>
+
+      <!-- Ruta: Gold Members checkout directo ($50–100 hoy) -->
+      <template id="tpl-gold">
+        <p class="eyebrow">Tu ruta recomendada</p>
+        <h2 class="form-title">Gracias por tu honestidad, <span data-nombre></span></h2>
+        <p class="form-note">Mi asesoría 1:1 requiere una inversión que hoy no está en tu rango. Pero no te voy a dejar sin dirección.</p>
+        <div class="offer">
+          <h3 class="offer-name">Gold Members</h3>
+          <p class="offer-price">$1,299 MXN <small>al mes</small></p>
+          <p class="offer-desc">Seguimiento mensual con mi equipo Legionario para que avances con estructura desde este mes.</p>
+          <ul class="list list-check offer-list">
+            <li><span class="pending">[PENDIENTE: beneficio 1 de Gold]</span></li>
+            <li><span class="pending">[PENDIENTE: beneficio 2 de Gold]</span></li>
+            <li><span class="pending">[PENDIENTE: beneficio 3 de Gold]</span></li>
+          </ul>
+          <a class="btn btn-primary btn-block" data-offer="gold" href="#" target="_blank" rel="noopener">Quiero entrar a Gold Members</a>
+        </div>
+        <p class="micro center">Y cuando estés listo para el 1:1, aquí voy a estar.</p>
+      </template>
+
+      <!-- Ruta: Programas ($35, menos de $50 hoy) -->
+      <template id="tpl-programa">
+        <p class="eyebrow">Tu ruta recomendada</p>
+        <h2 class="form-title">Gracias por tu honestidad, <span data-nombre></span></h2>
+        <p class="form-note">Mi asesoría 1:1 requiere una inversión que hoy no está en tu rango. Pero no te voy a dejar sin dirección.</p>
+        <div class="offer">
+          <h3 class="offer-name">El Sistema Legionario</h3>
+          <p class="offer-price">$696 MXN <small>pago único · acceso de por vida</small></p>
+          <p class="offer-desc">Mi sistema de entrenamiento y alimentación para que empieces hoy con estructura, a tu ritmo.</p>
+          <a class="btn btn-primary btn-block" data-offer="programa" href="#" target="_blank" rel="noopener">Quiero empezar con el Sistema</a>
+        </div>
+        <p class="micro center">Y cuando estés listo para el 1:1, aquí voy a estar.</p>
+      </template>
     </section>
 
     <!-- ============ PRUEBA + CASOS ============ -->

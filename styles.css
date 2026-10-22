@@ -413,16 +413,39 @@ strong { font-weight: 600; color: var(--text); }
 .form-error { color: var(--accent); font-size: 0.9rem; margin: 16px 0 0; }
 #apply-form .btn { margin-top: 20px; }
 
+.choices-3 { grid-template-columns: 1fr; }
+.choice small { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 2px; }
+.choice span { flex-direction: column; }
+.choice input:checked + span small { color: var(--text-2); }
+
+/* ---------- Paso 2: llamada (Calendly) ---------- */
 .calendar {
-  min-height: 420px;
-  border: 1px solid var(--line);
+  height: 1060px; /* Calendly en celular: calendario + preguntas */
+  margin: 16px -8px 10px;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: var(--bg-2);
-  margin-top: 16px;
+  background: #fff;
 }
-.calendar iframe { width: 100%; height: 680px; border: 0; display: block; }
-.calendar-placeholder { min-height: 420px; display: grid; place-items: center; align-content: center; gap: 8px; padding: 16px; text-align: center; }
+.calendar .calendly-inline-widget,
+.calendar iframe { width: 100%; height: 100%; min-width: 0 !important; border: 0; display: block; }
+.form-step a { color: var(--text-2); }
+
+/* ---------- Paso 2: downsell ---------- */
+.offer {
+  margin: 20px 0 14px;
+  padding: 22px 20px;
+  border-radius: var(--radius);
+  background: radial-gradient(90% 120% at 0% 0%, rgba(110, 26, 22, 0.55), transparent 65%), var(--bg-2);
+  border: 1px solid var(--accent-2);
+}
+.offer-name { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: 1.6rem; margin: 0 0 4px; }
+.offer-price { font-weight: 600; font-size: 1.15rem; margin: 0 0 10px; color: var(--accent); }
+.offer-price small { color: var(--text-2); font-weight: 400; font-size: 0.8rem; }
+.offer-desc { color: var(--text-2); margin: 0 0 14px; }
+.offer-list { margin-bottom: 18px; }
+.offer-note { color: var(--text); font-size: 0.92rem; margin: 0 0 14px; }
+.offer .btn { color: #fff; }
+.btn.is-pending { opacity: 0.45; pointer-events: none; }
 
 /* ---------- Cases ---------- */
 .cases {
@@ -669,7 +692,8 @@ strong { font-weight: 600; color: var(--text); }
   .callout { font-size: 0.9rem; padding: 8px 14px; }
   .field-grid { grid-template-columns: 1fr 1fr; }
   .field-full { grid-column: 1 / -1; }
-  .choices-4 { grid-template-columns: repeat(4, 1fr); }
+  .choices-3 { grid-template-columns: repeat(3, 1fr); }
+  .calendar { margin: 16px 0 10px; }
   .form-card { padding: 28px 32px 32px; }
   .case { flex-basis: 46%; }
   .stat-label { font-size: 0.9rem; }
@@ -696,5 +720,6 @@ strong { font-weight: 600; color: var(--text); }
   .path { padding: 34px 32px; }
 
   .about { grid-template-columns: 5fr 7fr; gap: 56px; }
+  .calendar { height: 720px; }
   .paths-final { grid-template-columns: 1fr 1fr; gap: 24px; }
 }
